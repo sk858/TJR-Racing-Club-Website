@@ -1,0 +1,404 @@
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  font-weight: 300;
+  position: relative;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; }
+
+body, html {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background-color: #fdfdfd; }
+
+a {
+  color: #ff0000;
+  transition: color 300ms; }
+
+.content h2 {
+  color: #ff0000;
+  font-weight: 500; }
+
+img {
+  max-width: 100%; }
+
+.navbar {
+  background-color: #1d242c;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; }
+  .navbar .right-box {
+    height: 60px;
+    float: right; }
+  .navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    .navbar ul > li {
+      display: inline-block; }
+      .navbar ul > li > a {
+        display: inline-block;
+        height: 60px;
+        line-height: 60px;
+        vertical-align: middle;
+        text-align: center;
+        padding: 0 10px;
+        width: 100px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #1d242c; }
+        .navbar ul > li > a:hover {
+          color: #ff0000;
+          background-color: #ddd; }
+        .navbar ul > li > a.current {
+          color: #ff0000;
+          background-color: #fff; }
+  .navbar .logo {
+    height: 45px;
+    margin-top: 8px;
+    border-bottom-left-radius: 999px;
+    border-bottom-right-radius: 999px; }
+
+#menu-toggle {
+  color: #fff;
+  float: right;
+  margin-top: 13px;
+  margin-right: 5px;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: none; }
+
+@media (max-width: 700px) {
+  .navbar .right-box {
+    display: none; }
+
+  .navbar.open .alert {
+    display: none; }
+  .navbar.open .right-box {
+    display: block;
+    float: none;
+    margin-left: -15px;
+    margin-right: -15px; }
+  .navbar.open ul {
+    margin-top: 6px; }
+    .navbar.open ul > li {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #ddd; }
+      .navbar.open ul > li > a {
+        display: block;
+        width: 100%; }
+
+  #menu-toggle {
+    display: block; } }
+.space-buffer {
+  height: 60px; }
+  .space-buffer.sm {
+    height: 30px; }
+
+.card {
+  border: 1px solid #d6d7d9;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-bottom: 20px; }
+  .card.schedule {
+    padding-bottom: 5px; }
+    .card.schedule .header {
+      background-color: #1d242c;
+      color: #fff;
+      padding: 15px 30px;
+      margin: -30px -30px 15px; }
+      .card.schedule .header .event-details {
+        float: right;
+        position: relative;
+        top: -38px; }
+    .card.schedule h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0; }
+    .card.schedule h4 {
+      margin: 0;
+      opacity: .85; }
+  .card .event-description {
+    display: block;
+    width: 100%; }
+
+.schedule-container {
+  max-width: 500px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: block;
+  margin: 0 auto; }
+
+.event-details {
+  opacity: .8; }
+
+.container.edge {
+  width: 100%; }
+
+.container.narrow {
+  max-width: 400px; }
+
+.t-c {
+  text-align: center; }
+
+.t-r {
+  text-align: right; }
+
+.container.dim:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5; }
+
+.bg-image {
+  background-size: cover;
+  background-position: center; }
+  .bg-image.bg-image-racecar {
+    height: 500px;
+    width: 100%;
+    background-image: url("../static_images/team.png"); }
+
+#hero > .container {
+  z-index: 1; }
+#hero h1 {
+  color: #fff; }
+
+.form-control {
+  border: 1px solid #d6d7d9;
+  border-radius: 3px;
+  display: block;
+  padding: 8px 15px;
+  width: 100%; }
+
+.form-group {
+  margin-bottom: 15px; }
+
+label {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #111;
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 5px; }
+
+.btn {
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #d6d7d9;
+  border-radius: 3px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 12px;
+  transition: background-color 300ms; }
+  .btn.primary {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5858;
+    border-color: #f10000; }
+    .btn.primary:hover {
+      background-color: #ff7272; }
+  .btn.block {
+    width: 100%; }
+
+.alert {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: right; }
+  .alert .inner {
+    background-color: #1d242c;
+    color: #c1cdd6;
+    display: inline-block;
+    padding: 5px 15px; }
+
+.jlr {
+  font-size: 0; }
+
+.jlr .jlr_item {
+  font-size: 1rem;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px; }
+
+.jlr img.jlr_img {
+  height: 200px;
+  opacity: 0.8;
+  transition: opacity 1s ease-in; }
+
+.jlr img.jlr_loaded {
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  opacity: 1; }
+
+.gray_out {
+  background-color: #eee; }
+
+#type_select {
+  max-width: 200px; }
+
+textarea {
+  min-height: 150px; }
+
+#hero h1 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 5rem;
+  font-weight: 900;
+  margin-top: 180px; }
+
+.footer {
+  background-color: #fff;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 20px; }
+  .footer p {
+    float: left;
+    display: inline-block;
+    margin: 0; }
+  .footer a {
+    float: right;
+    display: inline-block; }
+
+.schedule-wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #d6d7d9;
+  border-bottom: 1px solid #d6d7d9; }
+
+.content.padded {
+  padding-top: 50px; }
+.content h2 {
+  border-bottom: 1px dotted; }
+.content p {
+  text-indent: 20px;
+  font-size: 15px; }
+.content .row {
+  margin-bottom: 50px; }
+
+.static-1 {
+  padding: 100px 15px;
+  text-align: center; }
+  .static-1 p {
+    display: inline-block;
+    max-width: 700px;
+    margin-top: 0;
+    margin-bottom: 20px; }
+
+.gallery-forms {
+  padding: 50px 0;
+  margin-bottom: 30px;
+  background-color: #eff2f4; }
+
+.tabbed .tabs a {
+  color: #000;
+  display: inline-block;
+  border: 1px solid #d6d7d9;
+  position: relative;
+  bottom: -1px;
+  z-index: 1;
+  padding: 15px 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 130px;
+  text-align: center; }
+  .tabbed .tabs a.active {
+    background: #f8fafb;
+    border-bottom-color: #f8fafb;
+    font-weight: 600; }
+.tabbed section {
+  border: 1px solid #d6d7d9;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8fafb; }
+.tabbed .card {
+  min-height: 400px;
+  margin-bottom: 0; }
+
+.spaced {
+  display: block;
+  margin-bottom: 30px; }
+
+.captcha-group #captcha_code {
+  width: 100%; }
+
+.form-narrow {
+  max-width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.sponsors {
+  max-width: 100%;
+  width: 700px; }
+
+.bg-light-gray {
+  background-color: #EFF2F7; }
+
+#sponsorship-banner {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-top: 1px solid #d6d7d9;
+  border-bottom: 1px solid #d6d7d9; }
+  #sponsorship-banner .btn {
+    display: inline-block; }
+
+a.no-decoration {
+  text-decoration: none;
+  display: inline-block; }
+
+#pic {
+  margin-top: 20px;
+  position: relative;
+  width: 700px;
+  height: 450px;
+  box-shadow: 0 0 20px; }
+
+#pic img {
+  width: 100%;
+  height: 100%; }
+
+#pic > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px; }
+
+.scrollbar {
+  height: 100px;
+  width: 300px;
+  overflow-y: scroll;
+  margin-bottom: 25px; }
+
+/*# sourceMappingURL=main.css.map */
